@@ -261,6 +261,7 @@ body {
     line-height: 2;
 }
 
+
 /* Statistics Section Styling with Flexbox */
 .stats-container {
     display: flex; /* Use flexbox for the layout */
@@ -309,6 +310,79 @@ body {
     .stats-container {
         flex-direction: column; /* Stacks items vertically on small screens */
     }
+}
+
+/* Choosen Section */
+.Choose-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #ffff;
+}
+
+h2 {
+    font-size: 24px;
+    font-style: bold;
+    font-weight: 700;
+    line-height: 29px;
+    text-align: left;
+    letter-spacing: 0%;
+    color: #ffff;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+}
+
+/* --- CSS Grid Layout --- */
+.grid-layout {
+    display: grid;
+    /* Defines 3 columns with equal width, and automatic row height */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    
+    gap: 20px; /* Space between the cards */
+    padding: 40px;
+
+}
+
+.feature-card {
+    background-color: #1a063b; /* Slightly lighter card background */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+/*
+.icon {
+    color: #39ff14; /* Aqua/Neon green color for the icon 
+    font-size: 2rem;
+    margin-bottom: 15px;
+}*/
+
+/* Spanning logic for the "large" cards */
+@media (min-width: 576px) {
+    /* The large cards will span two vertical rows when the screen is wide enough */
+    .large-card {
+        grid-row: span 2;
+    }
+    
+    /* Position the first large card specifically in the first column */
+    .grid-layout .feature-card:first-child {
+        grid-column: 1 / 2;
+    }
+
+    /* Position the fourth card (Exclusive Interviews) in the second column */
+    .grid-layout .feature-card:nth-child(4) {
+        grid-column: 2 / 3;
+    }
+}
+
+/* Ensure text color is right for small paragraphs */
+.feature-card p {
+    color: #aaa;
 }
 
 
