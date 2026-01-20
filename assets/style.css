@@ -385,4 +385,71 @@ h2 {
     color: #aaa;
 }
 
+/*== Featured Episodes Section Start ==*/
+#Heading {
+    font-size: 48px;
+    color: #ffff;
+    font-weight: 700;
+    line-height: 58px;
+    text-transform: capitalize;
+
+}
+
+.episode-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.episode-card {
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+.episode-video iframe {
+    width: 100%;
+    height: 230px;
+    border: none;
+}
+
+.episode-info {
+    padding: 20px;
+}
+
+.episode-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #f5eaea;
+}
+
+.episode-description {
+    font-size: 12px;
+    margin-bottom: 15px;    
+    color: #ccc8c8;
+}
+
+.clock {
+    position:unset;
+  
+    
+}
+.episode-duration {
+    font-size: 14px;
+    color: #00ff9c;
+    font-weight: bold;
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    .episode-card {
+        max-width: 100%;
+    }
+    
+}
 
