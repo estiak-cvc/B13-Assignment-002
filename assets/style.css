@@ -230,5 +230,85 @@ body {
         font-size: 14px;
     }
 }
+/* About Section */
+
+.About-container {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.podcast-about h1 {
+    width: 1200px;
+    height: 50px;
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ffff;
+}
+
+.podcast-about p {
+   
+    color: #f8f4f4;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    line-height: 2;
+}
+
+/* Statistics Section Styling with Flexbox */
+.stats-container {
+    display: flex; /* Use flexbox for the layout */
+    justify-content: space-around; /* Distributes space between items */
+    flex-wrap: wrap; /* Allows items to wrap onto the next line on smaller screens */
+    margin-top: 40px;
+    gap: 20px; /* Space between the stat items */
+}
+.stats-container p {
+    font-size: 16px
+
+}
+
+.stats-container .stat-number {
+    font-size: 48px;
+    color: #00ff9c;
+    font-weight: bold;
+
+}
+.stat-item {
+    flex: 1; /* Items will grow equally to fill the space */
+    min-width: 200px; /* Minimum width before wrapping */
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #39ff14; /* Neon green color from image */
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #aaa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* Media Query for responsiveness */
+@media (max-width: 576px) {
+    .podcast-about h1 {
+        font-size: 2rem;
+    }
+    .stats-container {
+        flex-direction: column; /* Stacks items vertically on small screens */
+    }
+}
 
 
